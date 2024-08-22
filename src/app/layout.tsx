@@ -2,7 +2,7 @@ import "@/styles/globals.css"
 import { ThemeProvider } from "@/components/providers/theme-provider"
 import TopProgressBar from "@/components/providers/top-progressbar-provider"
 import { Toaster } from "@/components/ui/toaster"
-import { inter } from "@/lib/font"
+import { poppins } from "@/lib/font"
 import { Metadata } from "@/types/metadata"
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} antialiased`}
+        className={`${poppins.className} antialiased`}
         suppressHydrationWarning>
         <ThemeProvider
           attribute="class"

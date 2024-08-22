@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        "clash-display": "var(--font-clash-display)",
+      },
       fontSize: {
         fS10_14: ["10px", "14px"],
         fS12_20: ["12px", "20px"],
@@ -35,6 +38,12 @@ const config = {
         fS50_60: ["50px", "60px"],
       },
       colors: {
+        weserve: {
+          darkblue: "#080C2E",
+          purple: "#640EF1",
+          red: "#FF3232",
+          white: "#F1F4F5",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
