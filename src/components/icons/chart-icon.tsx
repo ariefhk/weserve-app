@@ -5,6 +5,7 @@ import React from "react"
 const ChartIcon: React.FC<SVGIcon> = ({ className, ...props }) => {
   return (
     <svg
+      {...props}
       className={cn(className)}
       width={props?.width ?? 24}
       height={props?.height ?? 24}

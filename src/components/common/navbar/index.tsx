@@ -6,6 +6,9 @@ import { cn } from "@/lib/cn"
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"
+import { SectionWrapper } from "../section-wrapper"
+import { NavbarLinkList } from "./navbar-link-list"
+import { midNavbarLinkListData } from "./navbar-link-list-data"
 
 const Navbar = () => {
   const { isScrolled } = useCheckScrolled(100)
@@ -16,7 +19,7 @@ const Navbar = () => {
         className={cn("w-full bg-weserve-white fixed top-0 z-30 ", {
           "border-b shadow-sm": isScrolled,
         })}>
-        <nav className="navbar   max-w-6xl mx-auto py-6 px-5 md:px-8 xl:px-0">
+        <SectionWrapper component="nav">
           <div className="flex flex-row items-center justify-between">
             <Image
               src="/images/logo-light.svg"
@@ -25,43 +28,7 @@ const Navbar = () => {
               width={176}
               height={42}
             />
-            <ul className=" flex-row gap-x-8 lg:flex hidden">
-              <li>
-                <Link
-                  href="#"
-                  className="text-indigo-950 hover:text-violet-700">
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-indigo-950 hover:text-violet-700">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-indigo-950 hover:text-violet-700">
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-indigo-950 hover:text-violet-700">
-                  Testimonials
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-indigo-950 hover:text-violet-700">
-                  Blog
-                </Link>
-              </li>
-            </ul>
+            <NavbarLinkList linkDatas={midNavbarLinkListData} />
             <div className="flex flex-row gap-x-4">
               <div className="bg-white flex items-center p-[10px] rounded-full">
                 <Link href="#">
@@ -106,44 +73,21 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-        </nav>
+        </SectionWrapper>
       </div>
       <div
         id="dropdown-menu"
-        className="megamenu absolute top-28 justify-center flex flex-col hidden px-5 lg:hidden md:px-10 w-full">
+        className="megamenu absolute top-28 justify-center flex flex-col  px-5 lg:hidden md:px-10 w-full">
         <div className="flex flex-col bg-white p-5 md:p-8 rounded-2xl gap-y-5">
-          <ul className="flex flex-col gap-y-5">
-            <li>
-              <a href="#" className="text-indigo-950 hover:text-violet-700">
-                Products
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-indigo-950 hover:text-violet-700">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-indigo-950 hover:text-violet-700">
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-indigo-950 hover:text-violet-700">
-                Testimonials
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-indigo-950 hover:text-violet-700">
-                Blog
-              </a>
-            </li>
-          </ul>
-          <a
+          <NavbarLinkList
+            className="flex flex-col gap-y-5"
+            linkDatas={midNavbarLinkListData}
+          />
+          <Link
             href="#"
             className="md:hidden py-3 bg-indigo-950 text-white text-base px-5 text-center w-full rounded-full">
             Sign In
-          </a>
+          </Link>
         </div>
       </div>
     </>

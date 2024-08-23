@@ -26,7 +26,7 @@ const Showcase = () => {
             <img
               src="/images/showcase1.png"
               alt=""
-              className="w-[320px] h-[220px] border-0 group-hover:border-4 border-violet-700 rounded-[16px] transition-all ease-in-out duration-500"
+              className="w-[320px] h-[220px] border-0 group-hover:border-4 border-violet-700 rounded-[16px] transition-all ease-in-out duration-100"
             />
           </div>
           <div className="group relative ">
