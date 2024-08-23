@@ -1,4 +1,6 @@
 import React from "react"
+import { ShowcaseList } from "./showcase-list"
+import { showcaseListData } from "./showcase-list-data"
 
 const Showcase = () => {
   return (
@@ -14,64 +16,7 @@ const Showcase = () => {
             by using our recommendation services and products
           </p>
         </div>
-        <div className="flex flex-wrap gap-y-8 lg:flex-row justify-center gap-x-7 items-center">
-          <div className="group relative ">
-            <div className="group-hover:opacity-100 transition-all ease-in-out duration-500 absolute opacity-0 bottom-8 justify-center flex w-full">
-              <a
-                href="#"
-                className="transition-all ease-in-out duration-500 shadow-2xl shadow-violet-700 hover:bg-indigo-950 hover:text-white bg-violet-700 px-7 py-3 font-semibold rounded-full text-white text-base">
-                View Details
-              </a>
-            </div>
-            <img
-              src="/images/showcase1.png"
-              alt=""
-              className="w-[320px] h-[220px] border-0 group-hover:border-4 border-violet-700 rounded-[16px] transition-all ease-in-out duration-100"
-            />
-          </div>
-          <div className="group relative ">
-            <div className="group-hover:opacity-100 transition-all ease-in-out duration-500 absolute opacity-0 bottom-8 justify-center flex w-full">
-              <a
-                href="#"
-                className=" transition-all ease-in-out duration-500shadow-2xl shadow-violet-700 hover:bg-indigo-950 hover:text-white bg-violet-700 px-7 py-3 font-semibold rounded-full text-white text-base">
-                View Details
-              </a>
-            </div>
-            <img
-              src="/images/showcase2.png"
-              alt=""
-              className="w-[320px] h-[220px] border-0 group-hover:border-4 border-violet-700 rounded-[16px] transition-all ease-in-out duration-500"
-            />
-          </div>
-          <div className="group relative ">
-            <div className="group-hover:opacity-100 transition-all ease-in-out duration-500 absolute opacity-0 bottom-8 justify-center flex w-full">
-              <a
-                href="#"
-                className=" transition-all ease-in-out duration-500shadow-2xl shadow-violet-700 hover:bg-indigo-950 hover:text-white bg-violet-700 px-7 py-3 font-semibold rounded-full text-white text-base">
-                View Details
-              </a>
-            </div>
-            <img
-              src="/images/showcase3.png"
-              alt=""
-              className="w-[320px] h-[220px] border-0 group-hover:border-4 border-violet-700 rounded-[16px] transition-all ease-in-out duration-500"
-            />
-          </div>
-          <div className="group relative ">
-            <div className="group-hover:opacity-100 transition-all ease-in-out duration-500 absolute opacity-0 bottom-8 justify-center flex w-full">
-              <a
-                href="#"
-                className=" transition-all ease-in-out duration-500shadow-2xl shadow-violet-700 hover:bg-indigo-950 hover:text-white bg-violet-700 px-7 py-3 font-semibold rounded-full text-white text-base">
-                View Details
-              </a>
-            </div>
-            <img
-              src="/images/showcase4.png"
-              alt=""
-              className="w-[320px] h-[220px] border-0 group-hover:border-4 border-violet-700 rounded-[16px] transition-all ease-in-out duration-500"
-            />
-          </div>
-        </div>
+        <ShowcaseList showcaseDatas={showcaseListData} />
       </div>
     </section>
   )

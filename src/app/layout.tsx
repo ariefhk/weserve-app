@@ -7,10 +7,10 @@ import { Metadata } from "@/types/metadata"
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Next.js Template",
-    default: "Next.js Template",
+    template: "%s | Weserve App",
+    default: "Weserve App",
   },
-  description: "Official Next.js template by Arief Rachman Hakim",
+  description: "Official Weserve App by Arief Rachman Hakim",
   metadataBase: new URL("https://arief-dev.vercel.app"),
 }
 
