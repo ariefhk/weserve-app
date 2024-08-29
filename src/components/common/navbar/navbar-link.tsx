@@ -12,7 +12,10 @@ const NavbarLink: React.FC<NavbarLinkProps> = ({ className, href, name }) => {
   return (
     <Link
       href={href}
-      className={cn("text-indigo-950 hover:text-violet-700", className)}>
+      className={cn(
+        "text-indigo-950 hover:text-violet-700 hover:font-medium transition-all ease-in-out duration-200",
+        className,
+      )}>
       {name}
     </Link>
   )

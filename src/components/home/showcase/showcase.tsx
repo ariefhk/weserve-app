@@ -11,7 +11,7 @@ interface ShowcaseProps extends ShowcaseData {
 const Showcase: React.FC<ShowcaseProps> = ({ className, ...props }) => {
   return (
     <div className={cn("group relative", className)}>
-      <div className="group-hover:opacity-100 transition-all ease-in-out duration-500 absolute opacity-0 bottom-8 justify-center flex w-full">
+      <div className="group-hover:opacity-100 transition-all ease-in-out duration-100 absolute opacity-0 bottom-8 justify-center flex w-full">
         <Link
           href={props.link.href}
           className="transition-all ease-in-out duration-500 shadow-2xl shadow-violet-700 hover:bg-indigo-950 hover:text-white bg-violet-700 px-7 py-3 font-semibold rounded-full text-white text-base">
@@ -23,7 +23,7 @@ const Showcase: React.FC<ShowcaseProps> = ({ className, ...props }) => {
         height={220}
         src={props.imageSrc}
         alt={props.link.name}
-        className="w-[320px] h-[220px] border-0 group-hover:border-4 border-violet-700 rounded-[16px] transition-all ease-in-out duration-100"
+        className="w-[320px] h-[220px] border-0 group-hover:border-4 border-violet-700 rounded-[16px] transition-all ease-in-out duration-100 object-cover"
       />
     </div>
   )

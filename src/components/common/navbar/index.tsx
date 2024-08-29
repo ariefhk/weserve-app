@@ -75,7 +75,7 @@ const Navbar = () => {
           </div>
         </SectionWrapper>
       </div>
-      <div
+      {/* <div
         id="dropdown-menu"
         className="megamenu absolute top-28 justify-center flex flex-col  px-5 lg:hidden md:px-10 w-full">
         <div className="flex flex-col bg-white p-5 md:p-8 rounded-2xl gap-y-5">
@@ -89,7 +89,7 @@ const Navbar = () => {
             Sign In
           </Link>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }

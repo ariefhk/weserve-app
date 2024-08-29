@@ -1,3 +1,5 @@
+import Image from "next/image"
+import Link from "next/link"
 import React from "react"
 
 const Hero = () => {
@@ -65,12 +67,14 @@ const Hero = () => {
             </p>
           </div>
           <div className="flex flex-col lg:flex-row gap-x-5 gap-y-5 items-center">
-            <a
+            <Link
               href="#"
               className="w-full text-center lg:w-fit transition-all ease-in-out duration-500 hover:bg-indigo-950 bg-violet-700 px-10 py-4 rounded-full text-white text-lg font-semibold">
               Try Free Trial
-            </a>
-            <a href="#" className="font-semibold text-violet-700 flex gap-x-2">
+            </Link>
+            <Link
+              href="#"
+              className="font-semibold text-violet-700 flex gap-x-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={25}
@@ -132,14 +136,16 @@ const Hero = () => {
                 />
               </svg>
               Schedule a Demo
-            </a>
+            </Link>
           </div>
         </div>
         <div className="flex items-center flex-col">
-          <img
+          <Image
             src="/images/illustration-hero.png"
-            className="h-[397px] md:basis-2/4 lg:h-[550px]"
+            className="h-[397px] md:basis-2/4 lg:h-[550px] object-contain"
             alt=""
+            width={550}
+            height={360}
           />
         </div>
       </div>
