@@ -6,7 +6,7 @@ interface AppLayoutProps extends React.PropsWithChildren {}
 
 const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
   return (
-    <div className="bg-weserve-white">
+    <div className="bg-weserve-white overflow-hidden">
       <Navbar />
       <div className="pt-[80px]">{children}</div>
       <Footer />
