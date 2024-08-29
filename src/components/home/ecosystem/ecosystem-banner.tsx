@@ -6,7 +6,7 @@ const EcosystemBanner = () => {
     <div className="flex items-center flex-col">
       <Image
         src="/images/illustration-features.png"
-        className="h-[360px] lg:h-[550px]"
+        className="h-[360px] lg:h-[550px] object-contain"
         alt=""
         width={550}
         height={360}
